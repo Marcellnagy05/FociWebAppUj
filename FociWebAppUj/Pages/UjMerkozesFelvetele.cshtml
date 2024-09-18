@@ -1,0 +1,64 @@
+﻿@page
+@model FociWebAppUj.Pages.UjMerkozesFelveteleModel
+
+@{
+    ViewData["Title"] = "UjMerkozesFelvetele";
+}
+
+<h1>UjMerkozesFelvetele</h1>
+
+<h4>Meccs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Meccs.Fordulo" class="control-label"></label>
+                <input asp-for="Meccs.Fordulo" class="form-control" />
+                <span asp-validation-for="Meccs.Fordulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meccs.HazaiVeg" class="control-label"></label>
+                <input asp-for="Meccs.HazaiVeg" class="form-control" />
+                <span asp-validation-for="Meccs.HazaiVeg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meccs.VendegVeg" class="control-label"></label>
+                <input asp-for="Meccs.VendegVeg" class="form-control" />
+                <span asp-validation-for="Meccs.VendegVeg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meccs.HazaiFelido" class="control-label"></label>
+                <input asp-for="Meccs.HazaiFelido" class="form-control" />
+                <span asp-validation-for="Meccs.HazaiFelido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meccs.VendegFelido" class="control-label"></label>
+                <input asp-for="Meccs.VendegFelido" class="form-control" />
+                <span asp-validation-for="Meccs.VendegFelido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meccs.HazaiCsapat" class="control-label"></label>
+                <input asp-for="Meccs.HazaiCsapat" class="form-control" />
+                <span asp-validation-for="Meccs.HazaiCsapat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meccs.VendegCsapat" class="control-label"></label>
+                <input asp-for="Meccs.VendegCsapat" class="form-control" />
+                <span asp-validation-for="Meccs.VendegCsapat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
