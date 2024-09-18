@@ -2,6 +2,7 @@
 using FociWebAppUj.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FociWebAppUj.Migrations
 {
     [DbContext(typeof(FociDbContext))]
-    partial class FociDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240918071403_sqlite.local_migration_627")]
+    partial class sqlitelocal_migration_627
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
