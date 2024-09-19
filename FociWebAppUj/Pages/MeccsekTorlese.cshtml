@@ -1,0 +1,64 @@
+﻿@page
+@model FociWebAppUj.Pages.MeccsekTorleseModel
+
+@{
+    ViewData["Title"] = "Meccsek Törlése";
+}
+
+<h1>MeccsekTorlese</h1>
+
+<h3>Biztosan törölni akarod?</h3>
+<div>
+    <h4>Meccs</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meccs.Fordulo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meccs.Fordulo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meccs.HazaiVeg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meccs.HazaiVeg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meccs.VendegVeg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meccs.VendegVeg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meccs.HazaiFelido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meccs.HazaiFelido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meccs.VendegFelido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meccs.VendegFelido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meccs.HazaiCsapat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meccs.HazaiCsapat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meccs.VendegCsapat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meccs.VendegCsapat)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Meccs.Id" />
+        <input type="submit" value="Törlés" class="btn btn-danger" /> |
+        <a asp-page="./MeccsekListazasa">Vissza a listához</a>
+    </form>
+</div>

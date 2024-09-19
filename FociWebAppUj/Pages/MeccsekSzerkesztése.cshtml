@@ -1,11 +1,11 @@
 ﻿@page
-@model FociWebAppUj.Pages.UjMerkozesFelveteleModel
+@model FociWebAppUj.Pages.MeccsekSzerkesztéseModel
 
 @{
-    ViewData["Title"] = "Új Mérkőzés Felvétele";
+    ViewData["Title"] = "Meccsek Szerkesztése";
 }
 
-<h1>Új Mérkőzés Felvétele</h1>
+<h1>Meccsek Szerkesztése</h1>
 
 <h4>Meccs</h4>
 <hr />
@@ -13,6 +13,7 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Meccs.Id" />
             <div class="form-group">
                 <label asp-for="Meccs.Fordulo" class="control-label"></label>
                 <input asp-for="Meccs.Fordulo" class="form-control" />
@@ -49,14 +50,14 @@
                 <span asp-validation-for="Meccs.VendegCsapat" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Létrehozás" class="btn btn-primary" />
+                <input type="submit" value="Mentés" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Vissza a főoldalra</a>
+    <a asp-page="./MeccsekListazasa">Vissza a listához</a>
 </div>
 
 @section Scripts {
