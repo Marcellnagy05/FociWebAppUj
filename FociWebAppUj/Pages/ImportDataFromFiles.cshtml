@@ -1,0 +1,10 @@
+﻿@page
+@model ImportDataFromFilesModel
+@{
+    ViewData["Title"] = "Import data from files";
+}
+<form method="post" enctype="multipart/form-data">
+    <label asp-for="Upload">Give the file</label>
+    <input asp-for="Upload" type="file" />
+    <input type="submit" value="Upload" />
+</form>
